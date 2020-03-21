@@ -27,7 +27,8 @@ function getWeather() {
               weatherForcast += "<p>"
               weatherForcast += "<b>Day " + index + "</b>: "
               weatherForcast += val.main.temp + "&degF |"
-              weatherForcast += ' wind speed: ' + val.wind.speed + 'mph'
+              weatherForcast += ' wind speed: ' + val.wind.speed + 'mph |'
+              weatherForcast += ' humidity: ' + val.main.humidity + '%'
               weatherForcast += "<span> | " + val.weather[0].description + "</span>";
               weatherForcast += "<img src='https://openweathermap.org/img/w/" + val.weather[0].icon + ".png'>"
               weatherForcast += "</p>"
