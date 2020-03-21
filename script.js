@@ -6,6 +6,11 @@ $(document).on('click', '#search-button', function() {
     storeSearch();
 })
 
+$(document).on('click', '.pseudo-search', function() {
+    getWeather();
+    storeSearch();
+})
+
 function getWeather() {
 
     var city = document.getElementById('search-city').value;
@@ -44,7 +49,7 @@ function storeSearch() {
 
     var city = document.getElementById('search-city').value;
     localStorage.setItem('cityName', city);
-    $('<button>', { id: 'last-search'}).appendTo('#previous-search');
+    $('<button>', { id: 'last-search', class: 'pseudo-search'}).appendTo('#previous-search');
     document.getElementById('last-search').innerHTML = localStorage.getItem('cityName');
 
 };
