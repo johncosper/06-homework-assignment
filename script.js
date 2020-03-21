@@ -1,6 +1,13 @@
 var key = "f15fc9d302b52500afaf375cf7812bcf";
 var url = "https://api.openweathermap.org/data/2.5/forecast";
 
+$(document).on('load', function() {
+
+    $('<button>', { id: 'last-search', class: 'pseudo-search'}).appendTo('#previous-search');
+    document.getElementById('last-search').innerHTML = localStorage.getItem('cityName');
+
+})
+
 $(document).on('click', '#search-button', function() {
     getWeather();
     storeSearch();

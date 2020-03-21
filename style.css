@@ -17,7 +17,6 @@ body {
 }
 
 #previous {
-    border: solid black 3px;
     float: left;
     display: flex;
     justify-content: center;
